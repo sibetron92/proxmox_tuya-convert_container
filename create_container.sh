@@ -62,7 +62,7 @@ wget -qL ${URL}/{commit_switcher,configure_tuya-convert,install_tuya-convert,log
 
 # Check for dependencies
 which iw >/dev/null || (
-  apt-get update >/dev/null
+  apt-get --allow-releaseinfo-change update >/dev/null
   apt-get -qqy install iw &>/dev/null ||
     die "Unable to install prerequisites."
 )
