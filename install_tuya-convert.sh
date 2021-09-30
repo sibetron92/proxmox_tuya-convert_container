@@ -50,7 +50,7 @@ done
 
 # Update container OS
 msg "Updating container OS..."
-apt-get update >/dev/null
+apt-get --allow-releaseinfo-change update >/dev/null
 apt-get -qqy upgrade &>/dev/null
 
 # Install prerequisites
